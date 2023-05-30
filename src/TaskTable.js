@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Task from '../Task';
-import {taskData} from './TaskData';
+import taskData from './TaskData';
 
 export default function TaskTable() {
   return (
@@ -14,7 +14,7 @@ export default function TaskTable() {
           </tr>
         </thead>
         <tbody>
-          {taskData.map(task=><Task t={task}/>)}
+          {taskData.map(task=>{return <Task key={task.id} t={task}/>})}
         </tbody>
       </table>
     </div>
