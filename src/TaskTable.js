@@ -1,4 +1,6 @@
-import React from 'react';
+import * as React from 'react';
+import Task from '../Task';
+import {taskData} from './TaskData';
 
 export default function TaskTable() {
   return (
@@ -6,11 +8,14 @@ export default function TaskTable() {
       <table>
         <thead>
           <tr>
-            <th style={{width:'10℅'}}>ID</th>
+            <th style={{ width: '10℅' }}>ID</th>
             <th>Description</th>
-            <th style={{width:'20%'}}>Status</th>
+            <th style={{ width: '20%' }}>Status</th>
           </tr>
         </thead>
+        <tbody>
+          {taskData.map(task=><Task t={task}/>)}
+        </tbody>
       </table>
     </div>
   );

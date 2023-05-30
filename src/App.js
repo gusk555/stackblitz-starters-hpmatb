@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TaskTable from './TaskTable.js'
+import TaskTable from './TaskTable'
 import './style.css';
 
 export default function App() {
@@ -9,3 +9,4 @@ export default function App() {
     </div>
   );
 }
+
